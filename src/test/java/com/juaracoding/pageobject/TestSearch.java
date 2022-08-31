@@ -37,7 +37,6 @@ public class TestSearch{
 	@Test (priority = 1)
 	public void testsearch() {
 		searchShop.search("Shirt");
-		delay(2);
 	}
 	
 	@Test (priority = 2)

@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.juaracoding.pageobject.TestLogout">
+      <class name="com.juaracoding.pageobject.TestSearch">
         <methods>
-          <include name="setUp"/>
-          <include name="logOut"/>
           <include name="pageObject"/>
           <include name="closeBrowser"/>
+          <include name="testsearch"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.juaracoding.pageobject.TestLogout -->
+      </class> <!-- com.juaracoding.pageobject.TestSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

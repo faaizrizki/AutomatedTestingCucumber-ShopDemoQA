@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import com.juaracoding.pageobject.drivers.strategies.DriverStrategy;
 import com.juaracoding.pageobject.drivers.strategies.DriverStrategyImplementer;
+import com.juaracoding.pageobject.utils.Constants;
 
 public class DriverSingleton {
 
@@ -20,7 +21,7 @@ public class DriverSingleton {
 	public WebDriver instantiate(String strategy) {
 		DriverStrategy driverStrategy = DriverStrategyImplementer.chooseStrategy(strategy);
 		driver = driverStrategy.setStrategy();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Constants.TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
 		return driver;
@@ -38,5 +39,8 @@ public class DriverSingleton {
 	public static WebDriver getDriver(){
 		return driver;
 	}
-	
+	public static void closeObjectInstance() {
+		instance = null;
+		driver.quit();
+	}
 }
