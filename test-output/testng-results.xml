@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-31T17:40:57 WIB" name="Default suite" finished-at="2022-08-31T17:41:41 WIB" duration-ms="43207">
+  <suite started-at="2022-08-31T22:38:55 WIB" name="Default suite" finished-at="2022-08-31T22:39:46 WIB" duration-ms="50360">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@31c88ec8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@708f5957]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-08-31T17:40:57 WIB" name="Default test" finished-at="2022-08-31T17:41:41 WIB" duration-ms="43207">
+    <test started-at="2022-08-31T22:38:55 WIB" name="Default test" finished-at="2022-08-31T22:39:46 WIB" duration-ms="50360">
       <class name="com.juaracoding.pageobject.step_definitions.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@31c88ec8]" started-at="2022-08-31T17:40:58 WIB" name="setUpClass" finished-at="2022-08-31T17:40:59 WIB" duration-ms="1435" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@708f5957]" started-at="2022-08-31T22:38:55 WIB" name="setUpClass" finished-at="2022-08-31T22:38:57 WIB" duration-ms="1510" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@36361ddb]]>
+                <![CDATA[org.testng.TestRunner@6cf0a747]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@31c88ec8]" started-at="2022-08-31T17:40:59 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-08-31T17:41:14 WIB" duration-ms="15258" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@708f5957]" started-at="2022-08-31T22:38:57 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-08-31T22:39:23 WIB" duration-ms="26164" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -34,42 +34,28 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@31c88ec8]" started-at="2022-08-31T17:41:14 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-08-31T17:41:28 WIB" duration-ms="13532" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["User login valid"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login User"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[chrome not reachable
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='primary']//li[1]"}
   (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-UDJP242', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62055}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: cface8c9e018f2f9b82b7c94f08f7e8f
-*** Element info: {Using=xpath, value=//input[@id='username']}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4bcb0f794eb6deb5a1bcf5c384d4a4e7
+*** Element info: {Using=xpath, value=//div[@id='primary']//li[1]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='primary']//li[1]"}
   (Session info: chrome=104.0.5112.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-UDJP242', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62055}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: cface8c9e018f2f9b82b7c94f08f7e8f
-*** Element info: {Using=xpath, value=//input[@id='username']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:55141}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4bcb0f794eb6deb5a1bcf5c384d4a4e7
+*** Element info: {Using=xpath, value=//div[@id='primary']//li[1]}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -87,68 +73,60 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy25.sendKeys(Unknown Source)
-at com.juaracoding.pageobject.pages.LoginPage.deleteLogin(LoginPage.java:55)
-at com.juaracoding.pageobject.step_definitions.TestLogin.user_delete_username_password(TestLogin.java:65)
-at ✽.User delete username password(file:///C:/Users/Acer/eclipse-workspace/com.juaracoding.pageobject.cucumber/src/test/resources/features/1.Login.feature:14)
+at jdk.proxy2/jdk.proxy2.$Proxy27.getText(Unknown Source)
+at com.juaracoding.pageobject.pages.LoginPage.msgError(LoginPage.java:81)
+at com.juaracoding.pageobject.step_definitions.TestLogin.user_invalid_credentilas(TestLogin.java:62)
+at ✽.User invalid credentials(file:///C:/Users/Acer/eclipse-workspace/com.juaracoding.pageobject.cucumber/src/test/resources/features/1.Login.feature:8)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@31c88ec8]" started-at="2022-08-31T17:41:28 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-08-31T17:41:38 WIB" duration-ms="10480" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@708f5957]" started-at="2022-08-31T22:39:23 WIB" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-08-31T22:39:43 WIB" duration-ms="20263" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["User place order"]]>
+                <![CDATA["User login valid"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Place Order"]]>
+                <![CDATA["Login User"]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[chrome not reachable
-  (Session info: chrome=104.0.5112.102)
+              <![CDATA[Cannot locate an element using xpath=//input[@id='username']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-UDJP242', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62055}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: cface8c9e018f2f9b82b7c94f08f7e8f]]>
+Driver info: driver.version: RemoteWebDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=104.0.5112.102)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//input[@id='username']
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-UDJP242', ip: '192.168.1.18', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 104.0.5112.102, chrome: {chromedriverVersion: 104.0.5112.79 (3cf3e8c8a07d..., userDataDir: C:\Users\Acer\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:62055}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: cface8c9e018f2f9b82b7c94f08f7e8f
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-at com.juaracoding.pageobject.step_definitions.TestPlaceOrder.user_go_to_web_page(TestPlaceOrder.java:40)
-at ✽.User go to web page(file:///C:/Users/Acer/eclipse-workspace/com.juaracoding.pageobject.cucumber/src/test/resources/features/2.PlaceOrder.feature:5)
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy27.sendKeys(Unknown Source)
+at com.juaracoding.pageobject.pages.LoginPage.deleteLogin(LoginPage.java:55)
+at com.juaracoding.pageobject.step_definitions.TestLogin.user_delete_username_password(TestLogin.java:75)
+at ✽.User delete username password(file:///C:/Users/Acer/eclipse-workspace/com.juaracoding.pageobject.cucumber/src/test/resources/features/1.Login.feature:14)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@31c88ec8]" started-at="2022-08-31T17:41:38 WIB" name="tearDownClass" finished-at="2022-08-31T17:41:41 WIB" duration-ms="2368" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.juaracoding.pageobject.step_definitions.TestRunner@708f5957]" started-at="2022-08-31T22:39:43 WIB" name="tearDownClass" finished-at="2022-08-31T22:39:46 WIB" duration-ms="2293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
