@@ -4,13 +4,15 @@ Feature: Login User
   Scenario: User login invalid
     When User go to login page
     And User enter username password invalid
-    And User click button login 
-    Then User invalid credentials
+    And User click button login invalid
+   
    
 
 
   @tag2
   Scenario: User login valid
+  	When User delete username password
     When User enter username password valid
-    And User click button login 
+    And User click button login valid
+    
     

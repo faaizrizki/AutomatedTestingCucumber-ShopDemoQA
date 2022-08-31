@@ -23,7 +23,11 @@ private WebDriver driver;
 	}
 	
 	@FindBy(xpath = "//a[normalize-space()='pink drop shoulder oversized t shirt']")
-	private WebElement clickProduct;
+	private WebElement clickProduct1;
+	
+	@FindBy(xpath = "//a[normalize-space()='black lux graphic t-shirt']")
+	private WebElement clickProduct2;
+	
 	
 	@FindBy(xpath = "//button[normalize-space()='Add to cart']")
 	private WebElement btnAddtoCart;
@@ -59,13 +63,13 @@ private WebDriver driver;
 	@FindBy(xpath = "//input[@role='combobox']")
 	private WebElement inputProvince;
 	
-	@FindBy(xpath = "//input[@id='billing_postcode']")
+	@FindBy(id="billing_postcode")
 	private WebElement postcode;
 	
-	@FindBy(xpath = "//input[@id='billing_phone'")
+	@FindBy(id="billing_phone")
 	private WebElement phone;
 	
-	@FindBy(xpath = "//input[@id='billing_email'")
+	@FindBy(id="billing_email")
 	private WebElement email;
 	
 	@FindBy(xpath = "//*[@id=\"terms\"]")
@@ -80,17 +84,35 @@ private WebDriver driver;
 	@FindBy(xpath = "//li[contains(text(),'Please read and accept the terms and conditions to')]")
 	private WebElement msgTermError;
 	
+	@FindBy (xpath = "//a[@class='noo-search']")
+	private WebElement searchbtn;
+	
+	@FindBy (xpath = "//input[@name='s']")
+	private WebElement typesearch;
 
 
-	public void inputorder() {
+	public void inputorder1() {
+		
+		// Product 1
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		clickProduct.click();
-		Select colorSelect = new Select(driver.findElement(By.id("pa_color")));
-		Select sizeSelect = new Select(driver.findElement(By.id("pa_size")));
+		clickProduct1.click();
 		js.executeScript("window.scrollBy(0,600)");
-		colorSelect.selectByValue("pink");
-		colorSelect.selectByValue("36");
+		Select colorSelect1 = new Select(driver.findElement(By.xpath("//select[@id='pa_color']")));
+		Select sizeSelect1 = new Select(driver.findElement(By.xpath("//select[@id='pa_size']")));
+		colorSelect1.selectByIndex(1);
+		sizeSelect1.selectByIndex(1);
+		btnAddtoCart.click();
 		delay(2);
+	}
+		
+	public void inputorder2() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		clickProduct2.click();
+		js.executeScript("window.scrollBy(0,600)");
+		Select colorSelect2 = new Select(driver.findElement(By.xpath("//select[@id='pa_color']")));
+		Select sizeSelect2 = new Select(driver.findElement(By.xpath("//select[@id='pa_size']")));
+		colorSelect2.selectByIndex(1);
+		sizeSelect2.selectByIndex(1);
 		btnAddtoCart.click();
 	}
 		
@@ -104,17 +126,18 @@ private WebDriver driver;
 	public void inputbilling() {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,600)");
-		firstName.sendKeys("Faiz");
-		lastName.sendKeys("Rizki");
+		this.firstName.sendKeys("Faiz");
+		this.lastName.sendKeys("Rizki");
 		selectCountry.click();
-		inputCountry.sendKeys("Indonesia",Keys.ENTER);
-		address.sendKeys("Ciledug");
-		city.sendKeys("Tangerang");
+		this.inputCountry.sendKeys("Indonesia",Keys.ENTER);
+		this.address.sendKeys("Ciledug");
+		this.city.sendKeys("Tangerang");
 		selectProvince.click();
-		inputProvince.sendKeys("Banten", Keys.ENTER);
-		postcode.sendKeys("15155");
-		phone.sendKeys("081234567");
-		email.sendKeys("faiz.keren@gmail.com");
+		this.inputProvince.sendKeys("Banten", Keys.ENTER);
+		this.postcode.sendKeys("15125");
+		this.phone.sendKeys("089737381127");
+		this.email.sendKeys("faiz.keren@gmail.com");
+		js.executeScript("window.scrollBy(0,-300)");
 	}
 	
 	public void clickterms() {
